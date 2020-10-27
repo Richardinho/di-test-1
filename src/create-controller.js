@@ -1,7 +1,6 @@
 define(['injector'], function (Injector) {
 
   var factory = function(options) {
-
     var injector = options.injector;
 
     return function createController(key) {
@@ -21,5 +20,4 @@ define(['injector'], function (Injector) {
   factory.inject = ['injector'];
 
   return factory;
-
 });

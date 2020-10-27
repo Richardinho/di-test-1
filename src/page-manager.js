@@ -7,9 +7,7 @@ define(function () {
   };
 
   PageManager.prototype = {
-
     renderView : function (view) {
-
       this.rootEl.innerHTML = '';
       this.rootEl.appendChild(view.el);
     }

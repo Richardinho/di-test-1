@@ -29,8 +29,6 @@ define([
   'use strict';
 
   return function bootstrap() {
-
-
     var injector = new Injector();
 
     injector.register('dataService',        DataService,          Injector.CACHE_INSTANCE     );
@@ -46,11 +44,7 @@ define([
     injector.register('barView',            BarView,              Injector.INSTANCE           );
 
     injector.start('app', function (app) {
-
       app.start();
-
     });
-
   }
-
 });

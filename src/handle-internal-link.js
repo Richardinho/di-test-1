@@ -16,5 +16,4 @@ define(function () {
   factory.inject = ['router'];
 
   return factory;
-
 });

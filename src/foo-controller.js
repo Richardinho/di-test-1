@@ -11,7 +11,6 @@ define(function () {
   FooController.prototype = {
     handleRequest : function () {
       this.dataService.fetchData().then(() => {
-
         this.pageManager.renderView(this.fooView.render());
       });
     }
@@ -20,5 +19,4 @@ define(function () {
   FooController.inject = ['pageManager', 'fooView', 'dataService'];
 
   return FooController;
-
 });

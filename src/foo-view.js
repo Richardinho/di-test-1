@@ -8,7 +8,6 @@ define([
   'use strict';
 
   var View = Backbone.View.extend({
-
     initialize : function (options) {
       this.dataService = options.dataService;
       this.handleInternalLink = options.handleInternalLink
@@ -31,7 +30,6 @@ define([
       });
       return this;
     }
-
   });
 
   View.inject = ['dataService', 'handleInternalLink'];
