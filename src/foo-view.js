@@ -1,40 +1,40 @@
 define([
-	'backbone'
-	,'underscore'
+  'backbone'
+  ,'underscore'
 ], function (
-	Backbone
-	,_
+  Backbone
+  ,_
 ) {
-	'use strict';
+  'use strict';
 
-	var View = Backbone.View.extend({
+  var View = Backbone.View.extend({
 
-		initialize : function (options) {
-			this.dataService = options.dataService;
-			this.handleInternalLink = options.handleInternalLink
-		},
+    initialize : function (options) {
+      this.dataService = options.dataService;
+      this.handleInternalLink = options.handleInternalLink
+    },
 
-		events :  {
-			'click [data-internal]' : 'clickOnInternalLink'
-		},
+    events :  {
+      'click [data-internal]' : 'clickOnInternalLink'
+    },
 
-		clickOnInternalLink : function (event) {
-			this.handleInternalLink(event);
-		},
+    clickOnInternalLink : function (event) {
+      this.handleInternalLink(event);
+    },
 
-		template : _.template(document.getElementById('foo-template').innerHTML),
+    template : _.template(document.getElementById('foo-template').innerHTML),
 
-		render : function () {
-			this.el.innerHTML = this.template({
-				title : this.dataService.title,
-				foo : this.dataService.foo
-			});
-			return this;
-		}
+    render : function () {
+      this.el.innerHTML = this.template({
+        title : this.dataService.title,
+        foo : this.dataService.foo
+      });
+      return this;
+    }
 
-	});
+  });
 
-	View.inject = ['dataService', 'handleInternalLink'];
+  View.inject = ['dataService', 'handleInternalLink'];
 
-	return View;
+  return View;
 });

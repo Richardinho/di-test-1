@@ -1,8 +1,8 @@
 define(['backbone'], function (Backbone) {
 
-	'use strict';
+  'use strict';
 
-	var Router = Backbone.Router.extend({});
+  var Router = Backbone.Router.extend({});
 
-	return Router;
+  return Router;
 });

@@ -1,28 +1,28 @@
 define(['backbone'], function (Backbone) {
 
-	'use strict';
+  'use strict';
 
-	var App = function(options) {
+  var App = function(options) {
 
-		this.router = options.router;
-		this.createController = options.createController;
+    this.router = options.router;
+    this.createController = options.createController;
 
-		this.router.route('',     'foo',    this.createController('fooController'));
-		this.router.route('bar',  'bar',    this.createController('barController'));
+    this.router.route('',     'foo',    this.createController('fooController'));
+    this.router.route('bar',  'bar',    this.createController('barController'));
 
-	}
+  }
 
-	App.prototype = {
+  App.prototype = {
 
-		start : function () {
+    start : function () {
 
-			Backbone.history.start();
-		}
+      Backbone.history.start();
+    }
 
-	};
+  };
 
-	App.inject = ['router', 'createController'];
+  App.inject = ['router', 'createController'];
 
-	return App;
+  return App;
 
 });

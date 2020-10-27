@@ -1,19 +1,19 @@
 define(function () {
 
-	'use strict';
+  'use strict';
 
-	var PageManager = function () {
-		this.rootEl = document.getElementById('app');
-	};
+  var PageManager = function () {
+    this.rootEl = document.getElementById('app');
+  };
 
-	PageManager.prototype = {
+  PageManager.prototype = {
 
-		renderView : function (view) {
+    renderView : function (view) {
 
-			this.rootEl.innerHTML = '';
-			this.rootEl.appendChild(view.el);
-		}
-	};
+      this.rootEl.innerHTML = '';
+      this.rootEl.appendChild(view.el);
+    }
+  };
 
-	return PageManager;
+  return PageManager;
 });

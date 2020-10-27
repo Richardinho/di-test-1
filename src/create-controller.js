@@ -1,29 +1,29 @@
 define(['injector'], function (Injector) {
 
-	var factory = function(options) {
+  var factory = function(options) {
 
-		var injector = options.injector;
+    var injector = options.injector;
 
-		return function createController(key) {
+    return function createController(key) {
 
-			return function handleRequest() {
+      return function handleRequest() {
 
-				var instance;
+        var instance;
 
-				if(injector.has(key)) {
+        if(injector.has(key)) {
 
-					instance = injector.get(key);
-					instance.handleRequest();
+          instance = injector.get(key);
+          instance.handleRequest();
 
-				} else {
-					throw error('no handler known');
-				}
-			};
-		};
-	};
+        } else {
+          throw error('no handler known');
+        }
+      };
+    };
+  };
 
-	factory.inject = ['injector'];
+  factory.inject = ['injector'];
 
-	return factory;
+  return factory;
 
 });
