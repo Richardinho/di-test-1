@@ -9,7 +9,6 @@ define(function () {
   }
 
   FooController.prototype = {
-
     handleRequest : function () {
       this.dataService.fetchData().then(() => {
 

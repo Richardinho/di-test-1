@@ -9,7 +9,6 @@ define(function () {
   }
 
   BarController.prototype = {
-
     handleRequest : function () {
       this.dataService.fetchData().then(() => {
         this.pageManager.renderView(this.barView.render());
